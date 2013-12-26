@@ -4,7 +4,6 @@
     "description": "Assimp Validators for the Symfony2 validator component",
     "keywords": ["3d", "validator", "assimp", "cad", "symfony2"],
     "license": "MIT",
-    "version": "0.1.0@dev",
     "authors": [
         {
             "name": "Marco Graetsch",
