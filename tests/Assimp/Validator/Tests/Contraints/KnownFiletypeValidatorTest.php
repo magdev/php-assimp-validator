@@ -2,7 +2,7 @@
 /**
  * The MIT License (MIT)
  *
- * Copyright (c) 2013 Marco Graetsch <magdev3.0@googlemail.com>
+ * Copyright (c) 2013 Marco Graetsch <magdev3.0@gmail.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,8 +23,8 @@
  * THE SOFTWARE.
  *
  * @author    magdev
- * @copyright 2013 Marco Graetsch <magdev3.0@googlemail.com>
- * @package
+ * @copyright 2013 Marco Graetsch <magdev3.0@gmail.com>
+ * @package   php-assimp-validator
  * @license   http://opensource.org/licenses/MIT MIT License
  */
 
@@ -35,28 +35,33 @@ use Assimp\Validator\Constraints\KnownFiletype;
 
 class KnownFiletypeValidatorTest extends \PHPUnit_Framework_TestCase
 {
-	protected $context;
-	protected $validator;
+    protected $context;
+    protected $validator;
 
 
-	/**
-	 * @see PHPUnit_Framework_TestCase::setUp()
-	 */
-	protected function setUp()
-	{
-		$this->context = $this->getMock('Symfony\Component\Validator\ExecutionContext', array(), array(), '', false);
-		$this->validator = new KnownFiletypeValidator();
-		$this->validator->initialize($this->context);
-	}
+    /**
+     * @see PHPUnit_Framework_TestCase::setUp()
+     */
+    protected function setUp()
+    {
+        $this->context = $this->getMock('Symfony\Component\Validator\ExecutionContext', array(), array(), '', false);
+        $this->validator = new KnownFiletypeValidator();
+        $this->validator->initialize($this->context);
+    }
 
 
-	protected function tearDown()
-	{
-		$this->context = null;
-		$this->validator = null;
-	}
+    /**
+     * @see PHPUnit_Framework_TestCase::tearDown()
+     */
+    protected function tearDown()
+    {
+        $this->context = null;
+        $this->validator = null;
+    }
 
-
+    /**
+     * @covers \Assimp\Validator\Constraints\KnownFiletypeValidator::validate
+     */
     public function testValidateSuccess()
     {
         $this->context->expects($this->never())
@@ -66,6 +71,9 @@ class KnownFiletypeValidatorTest extends \PHPUnit_Framework_TestCase
     }
 
 
+    /**
+     * @covers \Assimp\Validator\Constraints\KnownFiletypeValidator::validate
+     */
     public function testValidateFailure()
     {
         $this->context->expects($this->once())
