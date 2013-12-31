@@ -33,6 +33,11 @@ namespace Assimp\Validator\Tests\Constraints;
 use Assimp\Validator\Constraints\KnownFiletypeValidator;
 use Assimp\Validator\Constraints\KnownFiletype;
 
+/**
+ * Test for known file-formats
+ *
+ * @author magdev
+ */
 class KnownFiletypeValidatorTest extends \PHPUnit_Framework_TestCase
 {
     protected $context;

@@ -33,6 +33,11 @@ namespace Assimp\Validator\Tests\Constraints;
 use Assimp\Validator\Constraints\VersionCompareValidator;
 use Assimp\Validator\Constraints\VersionCompare;
 
+/**
+ * Test to compare a version-number agaginst the assimp version
+ *
+ * @author magdev
+ */
 class VersionCompareValidatorTest extends \PHPUnit_Framework_TestCase
 {
     protected $context;

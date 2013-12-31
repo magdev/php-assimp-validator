@@ -33,6 +33,11 @@ namespace Assimp\Validator\Tests\Constraints;
 use Assimp\Validator\Constraints\ExportableValidator;
 use Assimp\Validator\Constraints\Exportable;
 
+/**
+ * Test for exportable file-formats
+ *
+ * @author magdev
+ */
 class ExportableValidatorTest extends \PHPUnit_Framework_TestCase
 {
     protected $context;
